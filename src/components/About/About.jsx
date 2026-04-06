@@ -27,9 +27,11 @@ const About = () => {
           
           {/* IMAGE LEFT */}
           <div className="order-1 md:order-1">
-            <div className="w-full h-[300px] bg-gray-300 rounded-xl flex items-center justify-center">
-              <span className="text-gray-500">Vision Image</span>
-            </div>
+            <img
+              src="/Our vision.jpg"
+              alt="Our Vision"
+              className="w-full h-[300px] sm:h-80 md:h-[350px] object-cover rounded-xl shadow-lg"
+            />
           </div>
 
           {/* TEXT RIGHT */}
@@ -59,14 +61,16 @@ const About = () => {
         {/* ================= APPROACH (REVERSED ON MOBILE) ================= */}
         <div className="grid md:grid-cols-2 gap-10 items-center mb-20">
           
-          {/* IMAGE: order-1 (Top on mobile) | md:order-2 (Right on desktop) */}
+          {/* IMAGE RIGHT */}
           <div className="order-1 md:order-2">
-            <div className="w-full h-[300px] bg-gray-300 rounded-xl flex items-center justify-center">
-              <span className="text-gray-500">Approach Image</span>
-            </div>
+            <img
+              src="/our approach.avif"
+              alt="Our Approach"
+              className="w-full h-[300px] sm:h-80 md:h-[350px] object-cover rounded-xl shadow-lg"
+            />
           </div>
 
-          {/* TEXT: order-2 (Bottom on mobile) | md:order-1 (Left on desktop) */}
+          {/* TEXT LEFT */}
           <div className="order-2 md:order-1">
             <h2 className="text-2xl font-semibold text-[#C9A041] mb-4">
               Our Approach
@@ -95,9 +99,11 @@ const About = () => {
           
           {/* IMAGE LEFT */}
           <div className="order-1 md:order-1">
-            <div className="w-full h-[300px] bg-gray-300 rounded-xl flex items-center justify-center">
-              <span className="text-gray-500">Team Image</span>
-            </div>
+            <img
+              src="/our team.webp"
+              alt="Our Team"
+              className="w-full h-[300px] sm:h-80 md:h-[350px] object-cover rounded-xl shadow-lg"
+            />
           </div>
 
           {/* TEXT RIGHT */}

@@ -1,84 +1,23 @@
-// File: src/Pages/Home/Home.jsx
-import React from "react";
-import { Link } from "react-router-dom";
-import Project from "../../components/Projects/Project";
-import Properties from "../../components/Properties/Properties";
-import Testimonal from "../../components/Testimonal/Testimonal";
 import Footer from "../../components/footer/Footer";
-import About from "../../components/About/About";
+import Hero from "../../components/Hero/Hero";
 
 const Home = () => {
   return (
-    <div className="bg-[#F2F2F2] text-white">
-      {/* Hero Section */}
-      <div
-        className="min-h-screen bg-cover bg-center flex items-center w-full px-4 md:px-20 lg:px-32"
-        style={{
-          backgroundImage: "url(/header_img.png)",
-        }}
-        id="Header"
-      >
-        <div className="container text-center mx-auto py-4 px-6 md:px-20 lg:px-32">
-          {/* Original H1 */}
-          <h1 className="text-5xl sm:text-6xl md:text-[50px] max-w-3xl font-semibold pt-20 mx-auto">
-            Real Estate Different and Better
-          </h1>
+    <div className="bg-[#f9fafb] text-gray-800">
 
-          {/* Original H2 */}
-          <h2 className="text-xl md:text-[15px] max-w-3xl font-semibold pt-5 mx-auto">
-            We will help find your place, invest and build wealth in Lagos
-          </h2>
+      {/* HERO */}
+      <Hero />
 
-          {/* ✅ Styled CTA Button */}
-          <div className="mt-8">
-            <Link
-              to="/contact"
-              className="inline-block px-6 py-3 rounded-full font-semibold 
-                bg-[#152515] text-white border-2 border-[#C9A041] 
-                hover:bg-[#1f3b1f] hover:border-[#d9aa45] transition"
-            >
-              🔘 Speak to a Property Advisor
-            </Link>
-          </div>
-
-          {/* Filter Buttons (white text) */}
-          <div className="flex flex-wrap justify-center gap-4 mt-10">
-            {[
-              "Short Stays",
-              "Exclusive",
-              "Rent",
-              "Sale",
-              "Waterfront Plot",
-              "Commercial",
-            ].map((category) => (
-              <Link
-                key={category}
-                to={`/productList?category=${encodeURIComponent(category)}`}
-                className="border border-white text-white px-4 py-2 rounded-full hover:bg-white hover:text-black transition"
-              >
-                {category}
-              </Link>
-            ))}
-          </div>
-
-          {/* Learn More Link */}
-          <div className="mt-8">
-            <Link
-              to="/about"
-              className="inline-block underline text-white hover:text-[#C9A041] transition"
-            >
-              Learn More About Us →
-            </Link>
-          </div>
-        </div>
+      {/* OPTIONAL SPACING / FUTURE SECTIONS */}
+      <div className="py-10 md:py-16 px-4 sm:px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
+        {/* You can add sections here later */}
       </div>
 
-      {/* Section Components */}
-      <Project />
-      <Properties />
-      <About />
-      <Testimonal />
-      <Footer />
+      {/* FOOTER */}
+      <div className="border-t border-gray-200 pt-5">
+        <Footer />
+      </div>
+
     </div>
   );
 };

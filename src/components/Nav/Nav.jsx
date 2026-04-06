@@ -6,75 +6,54 @@ const Nav = () => {
   const [showNav, setShowNav] = useState(false);
 
   return (
-    <div className="relative z-50">
-      {/* Menu Icon */}
+    <div className="relative z-50 flex justify-between items-center p-6">
+      
+      {/* LOGO */}
+      <h1 className="text-xl font-bold">Lonnie Care</h1>
+
+      {/* DESKTOP NAV */}
+      <nav className="hidden md:flex space-x-8 text-lg font-medium">
+        <NavLink to="/" className="text-gray-700 hover:text-[#C9A041]">Home</NavLink>
+        <NavLink to="/about" className="text-gray-700 hover:text-[#C9A041]">About</NavLink>
+        <NavLink to="/services" className="text-gray-700 hover:text-[#C9A041]">Services</NavLink>
+        <NavLink to="/admission" className="text-gray-700 hover:text-[#C9A041]">Admission</NavLink>
+        <NavLink to="/contact" className="text-gray-700 hover:text-[#C9A041]">Contact</NavLink>
+      </nav>
+
+      {/* MOBILE MENU ICON */}
       {!showNav && (
-        <button className="p-6 cursor-pointer">
+        <button className="md:hidden">
           <img
-            onClick={() => setShowNav(true)}
             src={assets.menu_icon}
-            alt="Menu Icon"
-            className="w-6"
+            alt="Menu"
+            className="w-6 cursor-pointer"
+            onClick={() => setShowNav(true)}
           />
         </button>
       )}
 
-      {/* Right Side Navigation Panel (NO overlay) */}
+      {/* MOBILE MENU */}
       {showNav && (
-        <div className="fixed top-0 right-0 h-full bg-white z-50 w-[80%] max-w-sm shadow-lg transition-transform duration-300 ease-in-out">
-          {/* Header: Title & Close Button */}
-          <div className="flex justify-between items-center p-6 border-b border-gray-200">
-            <h2 className="text-2xl font-bold text-gray-800">Menu</h2>
-            <button
+        <div className="fixed top-0 right-0 h-full bg-white w-[80%] max-w-sm shadow-lg z-50">
+          
+          {/* Header */}
+          <div className="flex justify-between items-center p-6 border-b">
+            <h2 className="text-xl font-bold">Menu</h2>
+            <img
+              src={assets.cross_icon}
+              alt="Close"
+              className="w-6 cursor-pointer"
               onClick={() => setShowNav(false)}
-              aria-label="Close Menu"
-              className="focus:outline-none"
-            >
-              <img
-                src={assets.cross_icon}
-                alt="Close Icon"
-                className="w-6 hover:scale-110 transition-transform"
-              />
-            </button>
+            />
           </div>
 
-          {/* Navigation Links */}
-          <nav className="flex flex-col px-8 pt-8 space-y-6 text-xl font-medium">
-            <NavLink
-              to="/"
-              className="text-gray-700 hover:text-red-600 transition-colors"
-              onClick={() => setShowNav(false)}
-            >
-              Home
-            </NavLink>
-            <NavLink
-              to="/about"
-              className="text-gray-700 hover:text-red-600 transition-colors"
-              onClick={() => setShowNav(false)}
-            >
-              About
-            </NavLink>
-            <NavLink
-              to="/blog"
-              className="text-gray-700 hover:text-red-600 transition-colors"
-              onClick={() => setShowNav(false)}
-            >
-              Blog
-            </NavLink>
-            <NavLink
-              to="/contact"
-              className="text-gray-700 hover:text-red-600 transition-colors"
-              onClick={() => setShowNav(false)}
-            >
-              Contact
-            </NavLink>
-            <NavLink
-              to="/productList"
-              className="text-gray-700 hover:text-red-600 transition-colors"
-              onClick={() => setShowNav(false)}
-            >
-              Listing
-            </NavLink>
+          {/* Links */}
+          <nav className="flex flex-col px-8 pt-8 space-y-6 text-lg">
+            <NavLink to="/" onClick={() => setShowNav(false)}>Home</NavLink>
+            <NavLink to="/about" onClick={() => setShowNav(false)}>About</NavLink>
+            <NavLink to="/services" onClick={() => setShowNav(false)}>Services</NavLink>
+            <NavLink to="/admission" onClick={() => setShowNav(false)}>Admission</NavLink>
+            <NavLink to="/contact" onClick={() => setShowNav(false)}>Contact</NavLink>
           </nav>
         </div>
       )}

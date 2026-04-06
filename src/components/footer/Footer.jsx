@@ -1,64 +1,62 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { assets } from "../../assets/assets";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#152515] text-white py-10 px-4 md:px-20 lg:px-32">
-      <div className="flex flex-col md:flex-row justify-between items-start gap-10">
-        {/* Logo + Description */}
-        <div className="flex flex-col gap-4 max-w-sm">
-          <img src="Client_black_Logo png.png" alt="Logo" className="w-25" />
-          <p>
-            Client Point Properties is committed to helping individuals and
-            businesses achieve real estate success through expertise,
-            transparency, and a client-first approach.
+    <footer className="bg-[#2d2d2d] text-white py-6 px-6 md:px-20 lg:px-32">
+      
+      <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+        
+        {/* Logo */}
+        <div className="flex items-center gap-3">
+          <img src="/logo.png" alt="Logo" className="w-16" />
+          <p className="text-sm text-gray-300">
+            Lonnie Care RTC
           </p>
         </div>
 
         {/* Quick Links */}
-        <div>
-          <h3 className="text-xl font-semibold text-[#C9A041] mb-4">
-            Quick Links
-          </h3>
-          <ul className="space-y-2">
-            <li>
-              <Link to="/" className="hover:underline">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" className="hover:underline">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/productList" className="hover:underline">
-                Properties
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="hover:underline">
-                Contact
-              </Link>
-            </li>
-          </ul>
+        <ul className="flex flex-wrap gap-4 text-sm text-gray-300">
+          <li>
+            <Link to="/" className="hover:text-[#C9A041]">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className="hover:text-[#C9A041]">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/services" className="hover:text-[#C9A041]">
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link to="/admission" className="hover:text-[#C9A041]">
+              Admission
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className="hover:text-[#C9A041]">
+              Contact
+            </Link>
+          </li>
+        </ul>
+
+        {/* Contact */}
+        <div className="text-sm text-gray-300 text-center md:text-right">
+          <p>1-800-822-3525</p>
+          <p>admin@lonniecarertc.org</p>
         </div>
 
-        {/* Contact Info */}
-        <div>
-          <h3 className="text-xl font-semibold text-[#C9A041] mb-4">Contact</h3>
-          <p>Email: info@clientpoint.com</p>
-          <p>Phone: +234 123 456 7890</p>
-          <p>Location: Lagos, Nigeria</p>
-        </div>
       </div>
 
-      {/* Bottom Note */}
-      <div className="mt-10 text-center text-sm text-gray-400">
-        &copy; {new Date().getFullYear()} Client Point Properties. All rights
-        reserved.
+      {/* Bottom */}
+      <div className="mt-6 text-center text-xs text-gray-500">
+        © {new Date().getFullYear()} Lonnie Care RTC. All rights reserved.
       </div>
+      
     </footer>
   );
 };

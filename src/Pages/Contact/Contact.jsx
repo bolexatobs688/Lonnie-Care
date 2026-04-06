@@ -9,12 +9,12 @@ const Contact = () => {
       {/* HERO */}
       <div
         className="bg-cover bg-center flex items-center min-h-[140px] sm:min-h-[160px] md:min-h-[200px] w-full px-4 sm:px-6 md:px-12 lg:px-20"
-        style={{ backgroundImage: "url(/header_img.png)" }}
+        style={{ backgroundImage: "url(/white.jpg)" }}
       >
-        <div className="text-left text-white">
+        <div className="text-left">
 
           {/* BREADCRUMB */}
-          <div className="text-xs sm:text-sm flex items-center gap-2">
+          <div className="text-xs sm:text-sm flex items-center gap-2 text-gray-800">
             <Link to="/" className="hover:underline">
               Home
             </Link>
@@ -23,7 +23,7 @@ const Contact = () => {
           </div>
 
           {/* TITLE */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold pt-2 text-[#C9A041]">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold pt-2 text-gray-900">
             Contact Us
           </h1>
         </div>

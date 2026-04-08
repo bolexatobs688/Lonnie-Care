@@ -22,38 +22,28 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
-    }, 3000);
+    }, 5000); // slower for cinematic feel
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen px-6 text-center 
-    bg-gradient-to-b from-gray-100 via-white to-gray-200">
+    <section
+      className="flex flex-col items-center justify-center min-h-screen px-6 text-center 
+      bg-gradient-to-b from-gray-100 via-white to-gray-200"
+    >
+      {/* KEN BURNS IMAGE */}
+      <div className="w-[90%] max-w-xl h-64 md:h-80 mb-12 relative overflow-hidden rounded-2xl shadow-2xl">
+        
+        <img
+          key={index}
+          src={images[index]}
+          alt={`slide-${index}`}
+          className="w-full h-full object-cover animate-kenburns"
+        />
 
-      {/* BIGGER FLIP IMAGE */}
-      <div className="w-[90%] max-w-xl h-64 md:h-80 perspective mb-12">
-        <div className="relative w-full h-full preserve-3d animate-flip">
-
-          {/* Front */}
-          <div className="absolute w-full h-full backface-hidden">
-            <img
-              src={images[index]}
-              alt="front"
-              className="w-full h-full object-cover rounded-2xl shadow-2xl"
-            />
-          </div>
-
-          {/* Back */}
-          <div className="absolute w-full h-full rotate-y-180 backface-hidden">
-            <img
-              src={images[(index + 1) % images.length]}
-              alt="back"
-              className="w-full h-full object-cover rounded-2xl shadow-2xl"
-            />
-          </div>
-
-        </div>
+        {/* Soft overlay for smooth transition */}
+        <div className="absolute inset-0 bg-white/10"></div>
       </div>
 
       {/* TEXT */}
@@ -67,7 +57,6 @@ const Hero = () => {
 
       {/* BUTTONS */}
       <div className="flex gap-4 flex-wrap justify-center">
-
         {/* SERVICES BUTTON */}
         <Link
           to="/services"
@@ -89,9 +78,7 @@ const Hero = () => {
           Learn More
           <span className="w-6 h-[2px] bg-green-600 group-hover:bg-white"></span>
         </Link>
-
       </div>
-
     </section>
   );
 };

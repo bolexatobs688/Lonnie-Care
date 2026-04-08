@@ -18,35 +18,51 @@ const images = [
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
+  const [nextIndex, setNextIndex] = useState(1);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % images.length);
-    }, 5000); // slower for cinematic feel
+      setNextIndex((index + 1) % images.length);
+      setIsTransitioning(true);
+
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % images.length);
+        setIsTransitioning(false);
+      }, 1000); // match animation duration
+    }, 4000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [index]);
 
   return (
-    <section
-      className="flex flex-col items-center justify-center min-h-screen px-6 text-center 
-      bg-gradient-to-b from-gray-100 via-white to-gray-200"
-    >
-      {/* KEN BURNS IMAGE */}
-      <div className="w-[90%] max-w-xl h-64 md:h-80 mb-12 relative overflow-hidden rounded-2xl shadow-2xl">
-        
+    <section className="flex flex-col items-center justify-center min-h-screen px-6 text-center 
+    bg-gradient-to-b from-gray-100 via-white to-gray-200">
+
+      {/* IMAGE CONTAINER (UNCHANGED SIZE) */}
+      <div className="w-[90%] max-w-xl h-64 md:h-80 perspective mb-12 relative overflow-hidden">
+
+        {/* CURRENT IMAGE */}
         <img
-          key={index}
           src={images[index]}
-          alt={`slide-${index}`}
-          className="w-full h-full object-cover animate-kenburns"
+          alt=""
+          className={`absolute w-full h-full object-cover rounded-2xl shadow-2xl
+          transition-all duration-1000 ease-in-out
+          ${isTransitioning ? "scale-110 opacity-0" : "scale-100 opacity-100"}`}
         />
 
-        {/* Soft overlay for smooth transition */}
-        <div className="absolute inset-0 bg-white/10"></div>
+        {/* NEXT IMAGE */}
+        <img
+          src={images[nextIndex]}
+          alt=""
+          className={`absolute w-full h-full object-cover rounded-2xl shadow-2xl
+          transition-all duration-1000 ease-in-out
+          ${isTransitioning ? "scale-100 opacity-100" : "scale-105 opacity-0"}`}
+        />
+
       </div>
 
-      {/* TEXT */}
+      {/* TEXT (UNCHANGED) */}
       <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3 tracking-wide">
         Lonnie Care
       </h1>
@@ -55,9 +71,9 @@ const Hero = () => {
         Giving Young Adults a Brighter Future
       </h2>
 
-      {/* BUTTONS */}
+      {/* BUTTONS (UNCHANGED) */}
       <div className="flex gap-4 flex-wrap justify-center">
-        {/* SERVICES BUTTON */}
+
         <Link
           to="/services"
           className="flex items-center gap-3 px-7 py-3 rounded-full 
@@ -68,7 +84,6 @@ const Hero = () => {
           <span className="w-6 h-[2px] bg-white"></span>
         </Link>
 
-        {/* ABOUT BUTTON */}
         <Link
           to="/about"
           className="flex items-center gap-3 px-7 py-3 rounded-full 
@@ -78,7 +93,9 @@ const Hero = () => {
           Learn More
           <span className="w-6 h-[2px] bg-green-600 group-hover:bg-white"></span>
         </Link>
+
       </div>
+
     </section>
   );
 };

@@ -4,19 +4,17 @@ import Footer from "../../components/footer/Footer";
 const About = () => {
   return (
     <div className="bg-[#f9fafb] text-gray-800 min-h-screen flex flex-col">
-      
       {/* CONTENT */}
       <div className="flex-grow px-6 md:px-20 lg:px-32 pt-32 pb-16">
-
         {/* HEADER */}
         <div className="text-center mb-16">
-          <h1 className="text-3xl md:text-5xl font-bold text-[#C9A041]">
-            About{" "}
-            <span className="underline underline-offset-4">
-              Lonnie Care RTC
-            </span>
+          <h1
+            style={{ fontFamily: "'Dancing Script', cursive" }}
+            className="text-3xl md:text-5xl font-bold text-[#C9A041]"
+          >
+            About Lonnie Care RTC
           </h1>
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
             Compassionate care, structured support, and a commitment to helping
             young adults heal, grow, and thrive.
           </p>
@@ -24,11 +22,10 @@ const About = () => {
 
         {/* ================= VISION ================= */}
         <div className="grid md:grid-cols-2 gap-10 items-center mb-20">
-          
           {/* IMAGE LEFT */}
           <div className="order-1 md:order-1">
             <img
-              src="/Our vision.jpg"
+              src="/our vision.jpg"
               alt="Our Vision"
               className="w-full h-[300px] sm:h-80 md:h-[350px] object-cover rounded-xl shadow-lg"
             />
@@ -60,7 +57,6 @@ const About = () => {
 
         {/* ================= APPROACH (REVERSED ON MOBILE) ================= */}
         <div className="grid md:grid-cols-2 gap-10 items-center mb-20">
-          
           {/* IMAGE RIGHT */}
           <div className="order-1 md:order-2">
             <img
@@ -84,7 +80,6 @@ const About = () => {
               Through evidence-based practices and compassionate support, we
               guide young adults toward stability and growth.
             </p>
-
             <ul className="list-disc pl-5 mt-4 text-gray-600 space-y-2">
               <li>Individualized counseling and psychotherapy</li>
               <li>Group therapy and skill-building sessions</li>
@@ -96,7 +91,6 @@ const About = () => {
 
         {/* ================= TEAM ================= */}
         <div className="grid md:grid-cols-2 gap-10 items-center">
-          
           {/* IMAGE LEFT */}
           <div className="order-1 md:order-1">
             <img
@@ -125,7 +119,6 @@ const About = () => {
             </p>
           </div>
         </div>
-
       </div>
 
       <Footer />

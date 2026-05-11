@@ -3,17 +3,14 @@ import { Link } from "react-router-dom";
 
 const images = [
   "/image1.jpg.png",
-  "/image2.jpg.png",
-  "/image3.jpg.png",
-  "/image4.jpg.png",
-  "/image5.jpg.png",
-  "/image6.jpg.png",
-  "/image7.jpg.png",
-  "/image8.jpg.png",
-  "/image9.jpg.png",
-  "/image10.jpg.png",
-  "/image11.jpg.png",
-  "/image12.jpg.png",
+  "/image2.jpg.jpg",
+  "/image3.jpg.webp",
+  "/image5.jpg.webp",
+  "/image6.jpg.jpg",
+  "/image7.jpg.jpg",
+  "/image8.jpg.jpg",
+  "/image9.jpg.webp",
+  "/image10.jpg.avif",
 ];
 
 const Hero = () => {
@@ -36,18 +33,18 @@ const Hero = () => {
   }, [index]);
 
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen px-6 text-center 
-    bg-gradient-to-b from-gray-100 via-white to-gray-200">
-
+    <section
+      className="flex flex-col items-center justify-center min-h-screen px-6 text-center 
+    bg-gradient-to-b from-gray-100 via-white to-gray-200"
+    >
       {/* IMAGE CONTAINER (UNCHANGED SIZE) */}
       <div className="w-[90%] max-w-xl h-64 md:h-80 perspective mb-12 relative overflow-hidden">
-
         {/* CURRENT IMAGE */}
         <img
           src={images[index]}
           alt=""
           className={`absolute w-full h-full object-cover rounded-2xl shadow-2xl
-          transition-all duration-1000 ease-in-out
+          transition-all duration-1000 ease-in-outW
           ${isTransitioning ? "scale-110 opacity-0" : "scale-100 opacity-100"}`}
         />
 
@@ -59,11 +56,13 @@ const Hero = () => {
           transition-all duration-1000 ease-in-out
           ${isTransitioning ? "scale-100 opacity-100" : "scale-105 opacity-0"}`}
         />
-
       </div>
 
       {/* TEXT (UNCHANGED) */}
-      <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3 tracking-wide">
+      <h1
+        style={{ fontFamily: "Georgia, serif", color: "#4789A3" }}
+        className="text-4xl md:text-5xl font-bold mb-3 tracking-wide"
+      >
         Lonnie Care
       </h1>
 
@@ -73,7 +72,6 @@ const Hero = () => {
 
       {/* BUTTONS (UNCHANGED) */}
       <div className="flex gap-4 flex-wrap justify-center">
-
         <Link
           to="/services"
           className="flex items-center gap-3 px-7 py-3 rounded-full 
@@ -93,9 +91,7 @@ const Hero = () => {
           Learn More
           <span className="w-6 h-[2px] bg-green-600 group-hover:bg-white"></span>
         </Link>
-
       </div>
-
     </section>
   );
 };

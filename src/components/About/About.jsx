@@ -25,7 +25,7 @@ const About = () => {
           {/* IMAGE LEFT */}
           <div className="order-1 md:order-1">
             <img
-              src="/our visi.jpg"
+              src="/our vision.jpg"
               alt="Our Vision"
               className="w-full h-[300px] sm:h-80 md:h-[350px] object-cover rounded-xl shadow-lg"
             />

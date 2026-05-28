@@ -35,7 +35,7 @@ const Contact = () => {
 
           {/* LEFT SIDE */}
           <div className="space-y-5 md:space-y-6 text-center md:text-left">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#C9A041]">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#4789A3]">
               Get In Touch
             </h2>
 
@@ -61,7 +61,7 @@ const Contact = () => {
           {/* RIGHT SIDE CARD */}
           <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-md border border-gray-200">
 
-            <h3 className="text-lg sm:text-xl font-semibold text-[#C9A041] mb-6 text-center md:text-left">
+            <h3 className="text-lg sm:text-xl font-semibold text-[#4789A3] mb-6 text-center md:text-left">
               Contact Information
             </h3>
 

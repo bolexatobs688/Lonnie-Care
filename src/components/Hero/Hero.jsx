@@ -3,12 +3,7 @@ import { Link } from "react-router-dom";
 
 const images = [
   "/image1.jpg.png",
-  "/image2.jpg.jpg",
-  "/image3.jpg.webp",
-  "/image5.jpg.webp",
-  "/image6.jpg.jpg",
   "/image7.jpg.jpg",
-  "/image8.jpg.jpg",
   "/image9.jpg.webp",
   "/image10.jpg.avif",
 ];

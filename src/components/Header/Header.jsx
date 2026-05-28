@@ -6,7 +6,7 @@ const Header = () => {
 
   const linkClass = ({ isActive }) =>
     isActive
-      ? "text-[#34D399] font-semibold border-l-4 border-[#34D399] pl-4 transition-all"
+      ? "text-brand font-semibold border-l-4 border-[#34D399] pl-4 transition-all"
       : "text-white hover:text-[#34D399] pl-4 transition-colors duration-200";
 
   return (

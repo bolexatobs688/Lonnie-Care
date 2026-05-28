@@ -9,9 +9,9 @@ const Admission = () => {
       <div className="pt-24 md:pt-28 pb-16 md:pb-20 px-4 sm:px-6 md:px-12 lg:px-20">
 
         {/* HEADING */}
-        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-10 md:mb-12 text-gray-900 leading-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-10 md:mb-12 leading-tight text-[#4789A3]">
           Admissions to Care – Lonnie Care RTC
-        </h1>
+      </h1>
 
         {/* MAIN CONTENT */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">

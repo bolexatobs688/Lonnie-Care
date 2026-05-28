@@ -10,7 +10,7 @@ const About = () => {
         <div className="text-center mb-16">
           <h1
             style={{ fontFamily: "'Dancing Script', cursive" }}
-            className="text-3xl md:text-5xl font-bold text-[#C9A041]"
+            className="text-3xl md:text-5xl font-bold text-[#4789A3]"
           >
             About Lonnie Care RTC
           </h1>

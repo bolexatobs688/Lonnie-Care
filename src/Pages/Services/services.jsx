@@ -10,7 +10,7 @@ const Services = () => {
         <div className="max-w-7xl mx-auto">
 
           {/* HEADING */}
-          <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-10 md:mb-12 text-gray-900 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-10 md:mb-12 text-[#4789A3] leading-tight">
             Welcome to Lonnie Care Residential Treatment Center
           </h1>
 
@@ -61,21 +61,21 @@ const Services = () => {
                 <li>Risk of harm to others</li>
               </ul>
 
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 pt-2">
+              <h3 className="text-lg sm:text-xl font-semibold text-[#C9A041] pt-2">
                 Clinical Interventions
               </h3>
               <p>
                 Weekly psychological and psychiatric care to support growth.
               </p>
 
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-800">
+              <h3 className="text-lg sm:text-xl font-semibold text-[#C9A041]">
                 Multidisciplinary Review
               </h3>
               <p>
                 Quarterly meetings to evaluate and adjust treatment plans.
               </p>
 
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-800">
+              <h3 className="text-lg sm:text-xl font-semibold text-[#C9A041]">
                 Case Management
               </h3>
 

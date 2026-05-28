@@ -46,7 +46,7 @@ const Footer = () => {
 
         {/* Contact */}
         <div className="text-sm text-gray-300 text-center md:text-right">
-          <p>1-800-822-3525</p>
+          <p>1877-575-6664</p>
           <p>admin@lonniecarertc.org</p>
         </div>
 

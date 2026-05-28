@@ -70,7 +70,7 @@ const Contact = () => {
               <div>
                 <p className="text-xs uppercase text-gray-500">Phone</p>
                 <p className="text-base sm:text-lg font-medium text-gray-900">
-                  1-800-822-3525
+                  1877-575-6664
                 </p>
               </div>
 

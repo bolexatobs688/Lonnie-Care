@@ -2,29 +2,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand: #34D399;
   --color-primary: #4789A3;
 }
-
 
 * {
   font-family: "Outfit", sans-serif;
 }
 
 @layer utilities {
-
-  /* KEN BURNS ANIMATION */
   .animate-kenburns {
     animation: kenburns 5s ease-in-out forwards;
   }
-
   @keyframes kenburns {
-    0% {
-      transform: scale(1) translate(0, 0);
-    }
-    100% {
-      transform: scale(1.2) translate(-20px, -10px);
-    }
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.2) translate(-20px, -10px); }
   }
-
 }

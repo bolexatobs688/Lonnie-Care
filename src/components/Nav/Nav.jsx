@@ -3,7 +3,7 @@ import { assets } from "../../assets/assets";
 import { NavLink } from "react-router-dom";
 
 const navLinkClass = ({ isActive }) =>
-  isActive ? "text-[#4789A3]" : "text-gray-700 hover:text-[#4789A3]";
+  isActive ? "text-primary" : "text-gray-700 hover:text-primary";
 
 const Nav = () => {
   const [showNav, setShowNav] = useState(false);
